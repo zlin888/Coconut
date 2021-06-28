@@ -1,7 +1,6 @@
 #define DPS
 #define FUSED
 #define HOIST
-#define ADD3
 
 #ifdef DPS
 #ifdef FUSED
@@ -16,13 +15,7 @@
 #include "../../outputs/C/linalg.h"
 #endif
 #endif 
-#ifdef ADD3
-    const size_t DIM = 100;
-#elif DOT
-    const size_t DIM = 100;
-#elif CROSS
-    const size_t DIM = 3;
-#endif
+const size_t DIM = 3;
 
 
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
@@ -79,7 +72,23 @@ int main(int argc, char** argv)
 
     double total = 0;
     for (int count = 0; count < N; ++count) {
-        total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_dps(s, vec1, vec2, vec3, DIM, DIM, DIM));
+        // vec1->arr[0] += 1.0 / (2.0 + vec1->arr[0]);
+        // vec2->arr[10] += 1.0 / (2.0 + vec2->arr[10]);
+#ifdef DPS
+#ifndef HOIST
+	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
+#endif
+#endif
+    #ifdef DPS
+        total += vectorSum(TOP_LEVEL_linalg_cross_dps(s, vec1, vec2, DIM, DIM));
+	#else
+        total += vectorSum(TOP_LEVEL_linalg_cross(vec1, vec2));
+	#endif
+#ifdef DPS
+#ifndef HOIST
+	storage_free(s, VECTOR_ALL_BYTES(DIM));
+#endif
+#endif
     }
     clock_t end_time = clock();
     double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;

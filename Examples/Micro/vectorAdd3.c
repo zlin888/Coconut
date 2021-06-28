@@ -3,26 +3,8 @@
 #define HOIST
 #define ADD3
 
-#ifdef DPS
-#ifdef FUSED
 #include "../../outputs/C/linalg_opt_storaged.h"
-#else
-#include "../../outputs/C/linalg_storaged.h"
-#endif
-#else
-#ifdef FUSED
-#include "../../outputs/C/linalg_opt.h"
-#else
-#include "../../outputs/C/linalg.h"
-#endif
-#endif 
-#ifdef ADD3
-    const size_t DIM = 100;
-#elif DOT
-    const size_t DIM = 100;
-#elif CROSS
-    const size_t DIM = 3;
-#endif
+const size_t DIM = 100;
 
 
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
@@ -70,9 +52,7 @@ int main(int argc, char** argv)
 		vec3->arr[i] = dist(rng);
 	}
 
-#ifdef HOIST
 	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
-#endif
 	
     // timer_t t = tic();
     clock_t start_time = clock();

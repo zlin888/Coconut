@@ -1,36 +1,16 @@
-#define DPS
 #define FUSED
-#define HOIST
-#define ADD3
+#define CROSS
+#define DIM 3
 
-#ifdef DPS
+#include "../../outputs/C/linalg.h"
 #ifdef FUSED
 #include "../../outputs/C/linalg_opt_storaged.h"
 #else
-#include "../../outputs/C/linalg_storaged.h"
+#include "../../outputs/C/linalg_d.h"
 #endif
-#else
-#ifdef FUSED
-#include "../../outputs/C/linalg_opt.h"
-#else
-#include "../../outputs/C/linalg.h"
-#endif
-#endif 
-#ifdef ADD3
-    const size_t DIM = 100;
-#elif DOT
-    const size_t DIM = 100;
-#elif CROSS
-    const size_t DIM = 3;
-#endif
-
 
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
-#ifdef DPS
-  return TOP_LEVEL_linalg_matrixFill_dps(storage_alloc(MATRIX_ROWS_OFFSET(rows, cols, rows)), rows, cols, value, rows, cols, 0);
-#else
   return TOP_LEVEL_linalg_matrixFill(rows, cols, value);
-#endif
 }
 
 array_number_t vector_fill(card_t rows, number_t value) {
@@ -69,23 +49,22 @@ int main(int argc, char** argv)
 		vec2->arr[i] = dist(rng);
 		vec3->arr[i] = dist(rng);
 	}
-
-#ifdef HOIST
-	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
-#endif
 	
-    // timer_t t = tic();
-    clock_t start_time = clock();
+    timer_t t = tic();
 
     double total = 0;
     for (int count = 0; count < N; ++count) {
-        total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_dps(s, vec1, vec2, vec3, DIM, DIM, DIM));
+        vec1->arr[0] += 1.0 / (2.0 + vec1->arr[0]);
+        vec2->arr[1] += 1.0 / (2.0 + vec2->arr[1]);
+#ifdef ADD3
+        total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_d(vec1, vec2, vec3, vec1, vec2, vec3));
+#elif DOT
+        total += TOP_LEVEL_linalg_dot_prod_d(vec1, vec2, vec1, vec2);
+#elif CROSS
+        total += vectorSum(TOP_LEVEL_linalg_cross_d(vec1, vec2, vec1, vec2));
+#endif
     }
-    clock_t end_time = clock();
-    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-    printf("%f milliseconds\n", elapsed_time * 1000);
-
-    // float elapsed = toc2(t);
-    // printf("total =%f, time per call = %f ms\n, %f", total, elapsed / (double)(N), elapsed);
+    float elapsed = toc2(t);
+    printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(N));
 	return 0;
 }
