@@ -6,8 +6,8 @@
 #include "linalg.h"
 
 number_t TOP_LEVEL_programs_test1(number_t x) {
-	
-	return (1) / ((1) + (x));
+	number_t a = (1) / (x);
+	return (a) / ((a) + (1));
 }
 
 number_t TOP_LEVEL_programs_test2(number_t x, number_t b) {

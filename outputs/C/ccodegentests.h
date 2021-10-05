@@ -91,4 +91,29 @@ number_t TOP_LEVEL_ccodegentests_numSum(number_t n) {
 	}
 	return ite328;
 }
+typedef struct env_t_334 {
+	number_t n;
+} env_t_334;
+env_t_334 make_env_t_334(number_t n) {
+	env_t_334 env;
+	env.n = n;
+	return env;
+}
+
+value_t lambda334(env_t_334* env330, index_t i) {
+	number_t n329 = env330->n;
+	value_t res;
+	res.number_t_value = (n329) * ((double)(i));
+	return res;
+}
+array_number_t TOP_LEVEL_ccodegentests_liftingBug(number_t n) {
+	env_t_334 env_t_334_value = make_env_t_334(n); closure_t closure332 = make_closure(lambda334, &env_t_334_value);
+	closure_t v = closure332;
+	array_number_t array333 = (array_number_t)storage_alloc(sizeof(int) * 2);
+	array333->length=2;
+	array333->arr = (number_t*)storage_alloc(sizeof(number_t) * 2);
+	array333->arr[0] = v.lam(v.env, 0).number_t_value;
+	array333->arr[1] = v.lam(v.env, 1).number_t_value;;
+	return array333;
+}
 #endif

@@ -1,12 +1,11 @@
 #define DPS
 #include "../../outputs/C/usecases_fft_storaged.h"
 #include "../test.h"
-#include "hashmap.h"
 
-#define DEBUG
+// #define DEBUG
 #define dim 8
 #define LEN 12
-#define N 1
+#define N 100000
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
 #ifdef DPS
   return TOP_LEVEL_linalg_matrixFill_dps(malloc(MATRIX_ROWS_OFFSET(rows, cols, rows)), rows, cols, value, rows, cols, 0);
@@ -46,6 +45,7 @@ int main() {
 	array_number_t ndiv2 = vector_fill(dim / 2, 0);
 	array_number_t logn = vector_fill((int) (log(dim) / log(2)), 0);
 	array_array_number_t omegas = matrix_fill(LEN, 2, 0);
+	array_array_number_t unityRoots = matrix_fill(LEN, 2, 0);
 
     for (int i = 0; i < dim; i++) {
 #ifdef DEBUG
@@ -58,12 +58,37 @@ int main() {
     }
 
 	for (int i = 0; i < LEN; i++) {
-        omegas->arr[i]->arr[0] = 1;
-        omegas->arr[i]->arr[1] = 1;
+        p->arr[i] = (i / (dim / 2))  + 1;
 	}
 
-	for (int i = 0; i < LEN; i++) {
-        p->arr[i] = (i / (dim / 2))  + 1;
+	for (int i = 0; i < LEN; i++)
+	{
+		int unityStep = 1 << ((int) p->arr[i]);
+		double theta = 2 * M_PI / unityStep;
+		unityRoots->arr[i]->arr[0] = cos(theta);
+		unityRoots->arr[i]->arr[1] = sin(theta);
+	}
+
+    printf("UNITYROOTS:\n");
+    matrix_print(unityRoots);
+
+	// get_omegas
+	for (int i = 0; i < LEN; i++)
+	{
+		int x = i / (dim/ 2);
+        printf("%d ", x);
+		if (i % (int)pow(2, x) == 0)
+		{
+			omegas->arr[i]->arr[0] = 1;
+			omegas->arr[i]->arr[1] = 0;
+		}
+		else
+		{
+            omegas->arr[i]->arr[0] = omegas->arr[i - 1]->arr[0]  * unityRoots->arr[i - 1]->arr[0] - 
+                omegas->arr[i - 1]->arr[1]  * unityRoots->arr[i - 1]->arr[1];
+            omegas->arr[i]->arr[1] = omegas->arr[i - 1]->arr[0]  * unityRoots->arr[i - 1]->arr[1] + 
+                omegas->arr[i - 1]->arr[1]  * unityRoots->arr[i - 1]->arr[0];
+		}
 	}
 
     for (int i = 0; i < LEN; i++) {
@@ -110,17 +135,24 @@ int main() {
     array_print(offset1);
     array_print(offset2);
     array_print(offset3);
+    printf("OMEGAS:\n");
+    matrix_print(omegas);
 
 	double total = 0;
 	TIC();
+    storage_t s = storage_alloc(4096);
 	for (int i = 0; i < N; i++)
 	{
-        storage_t s = storage_alloc(1024);
+        primal->arr[0]->arr[0] += 0.1;
 		array_array_number_t r = TOP_LEVEL_usecases_fft_fft_dps(s, 
                 primal, ndiv2, logn, p, offset0, offset1, omegas, matrix_shape(primal), 
                 vector_shape(ndiv2), vector_shape(logn), vector_shape(p), 
                 vector_shape(offset2), vector_shape(offset3),
                matrix_shape(omegas));
+        total += r->arr[0]->arr[1];
+#ifdef DEBUG
+        matrix_print(r);
+#endif
 	}
 	TOC();
 	printf("%f", total);

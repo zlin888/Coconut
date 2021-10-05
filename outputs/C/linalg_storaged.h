@@ -285,7 +285,7 @@ number_t TOP_LEVEL_linalg_vectorFoldNumber_dps(storage_t stgVar95, closure_t f_d
 	card_t anfvar98_dps = 0;
 	number_t macroDef105 = z_dps;
 	storage_t stgVar100 = stgVar95;
-	for(int idx_dps = anfvar98_dps; idx_dps <= l_dps; idx_dps++){
+	for(int idx_dps = anfvar98_dps; idx_dps < l_dps; idx_dps++){
 		
 		macroDef105 = f_dps.lam(f_dps.env, stgVar100, macroDef105, range_dps->arr[idx_dps], 0, 0).number_t_value;;
 	}
@@ -1051,7 +1051,7 @@ array_array_number_t TOP_LEVEL_linalg_matrixConcat_dps(storage_t stgVar466, arra
 		macroDef480->arr=(array_number_t*)(STG_OFFSET(macroDef480, VECTOR_HEADER_BYTES));
 		storage_t stgVar472 = (STG_OFFSET(macroDef480, MATRIX_HEADER_BYTES(rows_dps)));
 		for(int r_dps = 0; r_dps < macroDef480->length; r_dps++){
-			array_number_t ite481 = 0;
+			array_number_t ite481 ;
 	if((r_dps) < (m1Rows_dps)) {
 		
 		ite481 = m1_dps->arr[r_dps];;
@@ -1111,7 +1111,7 @@ array_array_array_number_t TOP_LEVEL_linalg_matrix3DConcat_dps(storage_t stgVar4
 		macroDef512->arr=(array_array_number_t*)(STG_OFFSET(macroDef512, VECTOR_HEADER_BYTES));
 		storage_t stgVar504 = (STG_OFFSET(macroDef512, MATRIX_HEADER_BYTES(rows_dps)));
 		for(int r_dps = 0; r_dps < macroDef512->length; r_dps++){
-			array_array_number_t ite513 = 0;
+			array_array_number_t ite513 ;
 	if((r_dps) < (m1Rows_dps)) {
 		
 		ite513 = m1_dps->arr[r_dps];;

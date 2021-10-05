@@ -88,7 +88,21 @@ array_array_number_t TOP_LEVEL_usecases_blur_blur_forward_dps(storage_t stgVar39
 		storage_t stgVar45 = macroDef54;
 		for(int col_dps = 0; col_dps < macroDef54->length; col_dps++){
 			number_t ite58 = 0;
-	if (row_dps > 0 && row_dps < n_dps - 1 && col_dps > 0 && col_dps < n_dps - 1) {
+	if(ERROR[IfThenElse (IfThenElse (IfThenElse (Call (None, op_GreaterThan,
+                                          [row_dps, Value (0)]),
+                                    Call (None, op_LessThan,
+                                          [row_dps,
+                                           Call (None, op_Subtraction,
+                                                 [Call (None, cardToInt, [n_dps]),
+                                                  Value (1)])]), Value (false)),
+                        Call (None, op_GreaterThan, [col_dps, Value (0)]),
+                        Value (false)),
+            Call (None, op_LessThan,
+                  [col_dps,
+                   Call (None, op_Subtraction,
+                         [Call (None, cardToInt, [m_dps]), Value (1)])]),
+            Value (false))]) {
+		
 		ite58 = TOP_LEVEL_usecases_blur_new_value_dps(stgVar45, image_dps, row_dps, col_dps, image_shp, 0, 0);;
 	} else {
 		card_t size59 = width_card_t(image_shp.elem);

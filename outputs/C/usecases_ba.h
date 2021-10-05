@@ -13,7 +13,7 @@ array_number_t TOP_LEVEL_usecases_ba_radial_distort(array_number_t rad_params, a
 
 array_number_t TOP_LEVEL_usecases_ba_rodrigues_rotate_point(array_number_t rot, array_number_t x) {
 	number_t sqtheta = TOP_LEVEL_linalg_sqnorm(rot);
-	array_number_t ite106 = 0;
+	array_number_t ite106 ;
 	if((sqtheta) != (0)) {
 		number_t theta = sqrt(sqtheta);
 		number_t costheta = cos(theta);
@@ -198,9 +198,11 @@ void TOP_LEVEL_usecases_ba_run_ba_from_file(string_t fn, card_t n, card_t m, car
 			macroDef132->arr[x0] = array141;;
 		}
 	array_array_number_t obs = macroDef132;
+	timer_t t = tic();
 	array_number_t range = TOP_LEVEL_linalg_vectorRange(1, 10);
 	env_t_145 env_t_145_value = make_env_t_145(x,w,obs,feat,cam); closure_t closure140 = make_closure(lambda145, &env_t_145_value);
 	number_t tmp = TOP_LEVEL_linalg_vectorFoldNumber(closure140, 0, range);
+	toc(t, "BA");
 	return ;
 }
 

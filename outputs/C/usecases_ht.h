@@ -19,7 +19,7 @@ array_array_array_number_t TOP_LEVEL_usecases_ht_matrix3DUpdate(array_array_arra
 		
 		isInRange = false;;
 	}
-			array_array_number_t ite154 = 0;
+			array_array_number_t ite154 ;
 	if(isInRange) {
 		
 		ite154 = nm->arr[(i) - (s)];;
@@ -360,7 +360,7 @@ array_array_array_number_t TOP_LEVEL_usecases_ht_get_posed_relatives(card_t n_bo
 
 array_array_number_t TOP_LEVEL_usecases_ht_angle_axis_to_rotation_matrix(array_number_t angle_axis) {
 	number_t n = sqrt(TOP_LEVEL_linalg_sqnorm(angle_axis));
-	array_array_number_t ite195 = 0;
+	array_array_number_t ite195 ;
 	if((n) < (0.0001)) {
 		array_number_t array197 = (array_number_t)storage_alloc(sizeof(int) * 2);
 	array197->length=3;
@@ -427,7 +427,7 @@ array_array_array_number_t TOP_LEVEL_usecases_ht_relatives_to_absolutes(array_ar
 	card_t macroDef204 = relatives->length;
 	array_array_array_number_t macroDef205 = init;
 	for(int i = 0; i < macroDef204; i++){
-		array_array_array_number_t ite206 = 0;
+		array_array_array_number_t ite206 ;
 	if((parents->arr[i]) == (-1)) {
 		array_array_array_number_t newMatrix = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);
 	newMatrix->length=1;
@@ -515,7 +515,7 @@ array_array_number_t TOP_LEVEL_usecases_ht_get_skinned_vertex_positions(index_t 
 		macroDef225 = TOP_LEVEL_linalg_matrixAdd(macroDef225, TOP_LEVEL_linalg_matrixMultElementwise(curr_positions, w));;
 	}
 	array_array_number_t positions = macroDef225;
-	array_array_number_t mirrored_positions = 0;
+	array_array_number_t mirrored_positions ;
 	if((is_mirrored) == (1)) {
 		array_number_t array226 = (array_number_t)storage_alloc(sizeof(int) * 2);
 	array226->length=3;

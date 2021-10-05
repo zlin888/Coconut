@@ -453,7 +453,7 @@ array_array_number_t TOP_LEVEL_linalg_matrixConcat(array_array_number_t m1, arra
 	macroDef98->length=rows;
 	macroDef98->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * rows);
 		for(int r = 0; r < macroDef98->length; r++){
-			array_number_t ite99 = 0;
+			array_number_t ite99 ;
 	if((r) < (m1Rows)) {
 		
 		ite99 = m1->arr[r];;
@@ -482,7 +482,7 @@ array_array_array_number_t TOP_LEVEL_linalg_matrix3DConcat(array_array_array_num
 	macroDef103->length=rows;
 	macroDef103->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * rows);
 		for(int r = 0; r < macroDef103->length; r++){
-			array_array_number_t ite104 = 0;
+			array_array_number_t ite104 ;
 	if((r) < (m1Rows)) {
 		
 		ite104 = m1->arr[r];;
