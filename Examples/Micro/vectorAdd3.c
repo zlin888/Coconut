@@ -5,6 +5,7 @@
 
 #include "../../outputs/C/linalg_opt_storaged.h"
 const size_t DIM = 100;
+#define N 1000000
 
 
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
@@ -35,13 +36,13 @@ number_t vectorSum(array_number_t v) {
 
 int main(int argc, char** argv)
 {
-	if(argc != 2) {
-		printf("You should use the following format for running this program: %s <Number of Iterations>\n", argv[0]);
-		exit(1);
-	}
-	int N = atoi(argv[1]);
+	// if(argc != 2) {
+	// 	printf("You should use the following format for running this program: %s <Number of Iterations>\n", argv[0]);
+	// 	exit(1);
+	// }
+	// int N = atoi(argv[1]);
 	int rng = 42;
-    srand(rng);
+	srand(rng);
 
 	array_number_t vec1 = vector_fill(DIM, 0.0);
 	array_number_t vec2 = vector_fill(DIM, 0.0);

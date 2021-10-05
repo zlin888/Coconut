@@ -2,7 +2,7 @@
 //
 
 
-#include "stdafx.h"
+#include "test.h"
 #include <random>
 
 #include "usecases_ht.h"
@@ -81,7 +81,7 @@ int main()
 
 
   // boost::timer::auto_cpu_timer t;
-  timer_t t = tic();
+  TIC();
 
   // Debug 150s 
   // Release 1s
@@ -107,8 +107,7 @@ int main()
   }
 
   // std::cout << "total =" << total << ", time per call = " << t.elapsed().wall / double(N) / 1e6 << "ms" << std::endl;
-  auto elapsed = toc(t);
-  printf("total =%f, time per call = %f ms\n", total, elapsed / double(N));
+  TOC();
 
   return 0;
 }

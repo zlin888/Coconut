@@ -6,6 +6,7 @@
 #include <random>
 
 #include "usecases_gmm.h"
+#include "../../test.h"
 
 Real gmm_objective(Vec<Vector> const& x,
   Vector const& alphas, Vec<Vector> const& means, Vec<Vector> const& qs, Vec<Vector> const& ls,
@@ -56,7 +57,7 @@ int main()
 
 
   // boost::timer::auto_cpu_timer t;
-  timer_t t = tic();
+  //timer_t t = tic();
 
   // Debug 150s 
     // Release 1s
@@ -66,15 +67,18 @@ int main()
   N = N / 10;  // Debug is roughly this much slower than release -- multiply timings.
 #endif
   double wishart_m = 2.0;
+  TIC();
   for (cardinality_t count = 0; count < N; ++count) {
     alphas[0] += 1;
     double wishart_gamma = 1.0 / (1.0 + count);
     total += gmm_objective(xs, alphas, means, qs, ls, wishart_gamma, wishart_m);
   }
 
+  TOC();
+  printf("total = %f", total);
   // std::cout << "total =" << total << ", time per call = " << t.elapsed().wall / double(N) / 1000.0 << "us" << std::endl;
-  auto elapsed = toc(t);
-  printf("total =%f, time per call = %f ms\n", total, elapsed / double(N));
+  // auto elapsed = toc(t);
+  //  printf("total =%f, time per call = %f ms\n", total, elapsed / double(N));
 
   return 0;
 }

@@ -2,7 +2,7 @@ CC=clang++
 OPTFLAG=-O3
 CFLAGS=-std=c++14 -stdlib=libc++
 LIBS=-std=c++14 -stdlib=libc++ 
-FILES=benchmark_ht.cpp usecases_ht.cpp stdafx.cpp
+FILES=benchmark_ht.cpp usecases_ht.cpp 
 
 compile:
 	$(CC) $(OPTFLAG) $(CFLAGS) $(LIBS) $(FILES) -o ht_cpp.exe;

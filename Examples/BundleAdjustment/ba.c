@@ -1,5 +1,9 @@
+#define DPS
+#define FUSED
+#define HOIST
 #ifdef DPS
 #ifdef FUSED
+#include "../test.h"
 #include "../../outputs/C/usecases_ba_opt_storaged.h"
 #else
 #include "../../outputs/C/usecases_ba_storaged.h"
@@ -53,7 +57,6 @@ int main(int argc, char** argv)
 	X->arr[0] = 0.03;
 	X->arr[1] = 0.11;
 	X->arr[2] = -0.7;
-    timer_t t = tic();
 
 #ifdef HOIST
   storage_t s = storage_alloc(256);
@@ -66,14 +69,19 @@ int main(int argc, char** argv)
 #ifdef _DEBUG
     N = N / 100;  // Debug is roughly this much slower than release -- multiply timings.
 #endif
+	array_number_t m = TOP_LEVEL_usecases_ba_project_dps(s, cam, X, 11, 3);
+	printf("%f, %f\n", m->arr[0], m->arr[1]);
+	TIC();
     for (int count = 0; count < N; ++count) {
         X->arr[0] = 1.0 / (2.0 + count);
         cam->arr[5] = 1.0 + count * 1e-6;
+	cam->arr[0] = cam->arr[0] + 0.0001;
 #ifdef DPS
 #ifndef HOIST
     storage_t s = storage_alloc(256);
 #endif
-        total += TOP_LEVEL_linalg_sqnorm_dps(empty_storage, TOP_LEVEL_usecases_ba_project_dps(s, cam, X, 11, 3), 2);
+	array_number_t m = TOP_LEVEL_usecases_ba_project_dps(s, cam, X, 11, 3);
+        total += TOP_LEVEL_linalg_sqnorm_dps(empty_storage, m, 2);
 #ifndef HOIST
     storage_free(s, 256);
 #endif
@@ -81,7 +89,7 @@ int main(int argc, char** argv)
         total += TOP_LEVEL_linalg_sqnorm(TOP_LEVEL_usecases_ba_project(cam, X));
 #endif
     }
-    float elapsed = toc2(t);
-    printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(N));
+	TOC();
+	printf("%f", total);
 	return 0;
 }

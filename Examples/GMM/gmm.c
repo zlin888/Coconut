@@ -1,5 +1,9 @@
+#define DPS
+#define FUSED
+#define HOIST
 #ifdef DPS
 #ifdef FUSED
+#include "../test.h"
 #include "../../outputs/C/usecases_gmm_opt_storaged.h"
 #else
 #include "../../outputs/C/usecases_gmm_storaged.h"
@@ -93,7 +97,6 @@ int main(int argc, char** argv)
   // TOP_LEVEL_usecases_gmm_Qtimesv_test(0);
 
   // boost::timer::auto_cpu_timer t;
-  timer_t t = tic();
 
   // Debug 150s 
     // Release 1s
@@ -103,20 +106,36 @@ int main(int argc, char** argv)
   N = N / 10;  // Debug is roughly this much slower than release -- multiply timings.
 #endif
   double wishart_m = 2.0;
+  double wishart_gamma = 1.0;
+  // printf("x: ");
+  // matrix_print(xs);
+  printf("alphas: ");
+  array_print(alphas);
+  printf("means: ");
+  matrix_print(means);
+  printf("qs: ");
+  matrix_print(qs);
+  printf("ls: ");
+  matrix_print(ls);
+  printf("wishart_m, %f\n", wishart_m);
+  printf("wishart_gamma, %f\n", wishart_gamma);
+
+	TIC();
   for (int count = 0; count < N; ++count) {
     alphas->arr[0] += 1;
     double wishart_gamma = 1.0 / (1.0 + count);
 #ifdef DPS
-    total += TOP_LEVEL_usecases_gmm_gmm_objective_dps(empty_storage, xs, alphas, means, qs, ls, wishart_gamma, wishart_m, 
+    double r = TOP_LEVEL_usecases_gmm_gmm_objective_dps(empty_storage, xs, alphas, means, qs, ls, wishart_gamma, wishart_m, 
     	matrix_shape(xs), vector_shape(alphas), matrix_shape(means), matrix_shape(qs), matrix_shape(ls), 0, 0);
+    // printf("%f\n", r);
+    total += r;
 #else
     total += TOP_LEVEL_usecases_gmm_gmm_objective(xs, alphas, means, qs, ls, wishart_gamma, wishart_m);
 #endif
   }
 
   // std::cout << "total =" << total << ", time per call = " << t.elapsed().wall / double(N) / 1000.0 << "us" << std::endl;
-  double elapsed = toc2(t);
-  printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(N));
-
+  printf("%f\n", total);
+  TOC();
   return 0;
 }

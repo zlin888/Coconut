@@ -1,0 +1,1 @@
+clang ba.c -lm -g

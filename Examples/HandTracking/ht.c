@@ -1,3 +1,5 @@
+#define DPS
+#define HOIST
 #ifdef DPS
 // #ifdef FUSED
 // #include "../../outputs/C/usecases_ht_opt_storaged.h"
@@ -11,6 +13,7 @@
 #include "../../outputs/C/usecases_ht.h"
 // #endif
 #endif
+#include "../test.h"
 
 double dist01() {
   return ((double)rand()/(double)RAND_MAX);
@@ -71,10 +74,9 @@ int main(int argc, char** argv)
 
   array_number_t angle = vector_fill(3, 0);
   for (int i = 0; i < 3; ++i)
-    angle->arr[i] = dist01();
+    angle->arr[i] = i;
 
-
-  timer_t t = tic();
+  TIC();
 #ifdef HOIST
   storage_t s = storage_alloc(256);
 #endif
@@ -91,8 +93,9 @@ int main(int argc, char** argv)
 #else
     array_array_number_t verts = TOP_LEVEL_usecases_ht_angle_axis_to_rotation_matrix(angle);
 #endif
-    array_number_t verts1 = verts->arr[0];
-    total += vectorNorm(verts1);
+    // array_number_t verts1 = verts->arr[0];
+    // total += vectorNorm(verts1);
+    total += verts->arr[0]->arr[0];
 #ifdef DPS
 #ifndef HOIST
     storage_free(s, 256);
@@ -101,8 +104,10 @@ int main(int argc, char** argv)
     // printf("%d--\n", count);
   }
 
-  double elapsed = toc2(t);
-  printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(N));
+  printf("%f\n", total);
+  TOC();
+  // double elapsed = toc2(t);
+  // printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(N));
 
   return 0;
 }

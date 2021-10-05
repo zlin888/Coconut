@@ -17,6 +17,7 @@ let inline logsumexp (arr: Vector) =
     (log semx) + mx
 
 // nth triangular number (0 1 3 6)
+// tri -1 = 0
 // tri 0 = 0
 // tri 1 = 1
 // tri 2 = 3
@@ -40,7 +41,7 @@ let tri n = n * (n+1) / 2
 // [      l0  exp(q2)        0        0 ]
 // [      l1       l2  exp(q3)        0 ]
 // [      l3       l4       l5  exp(q4) ]
-let Qtimesv (q : Vector) (l : Vector) (v : Vector) =
+let Qtimesv (q : Vector) (l : Vector) (v : Vector) = // v: 3
     build (length v) (fun i ->
       // Not a valid F~ operation.
       // let li = vectorSlice (Card i) (tri (i-1)) l
@@ -55,7 +56,7 @@ let Qtimesv (q : Vector) (l : Vector) (v : Vector) =
             acc + l.[idx] * v.[j]
           else 
             acc
-        ) 0.0 (Card 0) (length l)
+        ) 0.0 (Card 0) (length l) // l 3
       sum + exp(q.[i]) * v.[i]
     )
 
