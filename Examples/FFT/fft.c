@@ -1,40 +1,48 @@
 #define DPS
-#include "../../outputs/C/usecases_fft_storaged.h"
 #include "../test.h"
 
-// #define DEBUG
-#define dim 8
-#define LEN 12
-#define N 100000
-array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
-#ifdef DPS
-  return TOP_LEVEL_linalg_matrixFill_dps(malloc(MATRIX_ROWS_OFFSET(rows, cols, rows)), rows, cols, value, rows, cols, 0);
+#ifdef DEBUG
+#define N 1
 #else
-  return TOP_LEVEL_linalg_matrixFill(rows, cols, value);
+#define N 10000
 #endif
-}
 
-int vector_shape(array_number_t vec) {
-  return vec->length;
-}
 
-array_number_t vector_fill(card_t rows, number_t value) {
-  return matrix_fill(1, rows, value)->arr[0];
-}
+#define dim (1 << 10)
+#define LEN ((dim / 2) * (log(dim) / log(2)))
 
-matrix_shape_t matrix_shape(array_array_number_t mat) {
-  matrix_shape_t res;
-  res.card = mat->length;
-  res.elem = mat->arr[0]->length;
-  return res;
-}
+#include "../../outputs/C/usecases_fft_storaged.h"
 
-double dist(int seed) {
-  return rand();
-}
+// array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
+// #ifdef DPS
+//   return TOP_LEVEL_linalg_matrixFill_dps(malloc(MATRIX_ROWS_OFFSET(rows, cols, rows)), rows, cols, value, rows, cols, 0);
+// #else
+//   return TOP_LEVEL_linalg_matrixFill(rows, cols, value);
+// #endif
+// }
+
+// int vector_shape(array_number_t vec) {
+//  return vec->length;
+//}
+//
+//array_number_t vector_fill(card_t rows, number_t value) {
+//  return matrix_fill(1, rows, value)->arr[0];
+//}
+//
+//matrix_shape_t matrix_shape(array_array_number_t mat) {
+//  matrix_shape_t res;
+//  res.card = mat->length;
+//  res.elem = mat->arr[0]->length;
+//  return res;
+//}
+//
+//double dist(int seed) {
+//  return ((double)rand()/(double)RAND_MAX);
+//}
 
 int main() {
 	int rng = 42;
+    srand(rng);
 
 	array_array_number_t primal = matrix_fill(dim, 2, 0);
 	array_array_number_t dual = matrix_fill(dim, 2, 0);
@@ -52,8 +60,8 @@ int main() {
         primal->arr[i]->arr[0] = i + 1;
         primal->arr[i]->arr[1] = 0;
 #else 
-        primal->arr[i]->arr[0] = dist(rng);
-        primal->arr[i]->arr[1] = dist(rng);
+        primal->arr[i]->arr[0] = dist();
+        primal->arr[i]->arr[1] = dist();
 #endif
     }
 
@@ -69,14 +77,15 @@ int main() {
 		unityRoots->arr[i]->arr[1] = sin(theta);
 	}
 
+#ifdef DEBUG
     printf("UNITYROOTS:\n");
     matrix_print(unityRoots);
+#endif
 
 	// get_omegas
 	for (int i = 0; i < LEN; i++)
 	{
 		int x = i / (dim/ 2);
-        printf("%d ", x);
 		if (i % (int)pow(2, x) == 0)
 		{
 			omegas->arr[i]->arr[0] = 1;
@@ -131,25 +140,28 @@ int main() {
         }
     }
 
+#ifdef DEBUG
     array_print(offset0);
     array_print(offset1);
     array_print(offset2);
     array_print(offset3);
     printf("OMEGAS:\n");
     matrix_print(omegas);
+#endif
 
 	double total = 0;
 	TIC();
-    storage_t s = storage_alloc(4096);
+    storage_t s = storage_alloc(dim * sizeof(double) * 100);
 	for (int i = 0; i < N; i++)
 	{
+        //printf("%d\n", i);
         primal->arr[0]->arr[0] += 0.1;
 		array_array_number_t r = TOP_LEVEL_usecases_fft_fft_dps(s, 
                 primal, ndiv2, logn, p, offset0, offset1, omegas, matrix_shape(primal), 
                 vector_shape(ndiv2), vector_shape(logn), vector_shape(p), 
                 vector_shape(offset2), vector_shape(offset3),
                matrix_shape(omegas));
-        total += r->arr[0]->arr[1];
+        total += r->arr[0]->arr[0];
 #ifdef DEBUG
         matrix_print(r);
 #endif

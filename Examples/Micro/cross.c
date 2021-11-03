@@ -15,6 +15,7 @@
 #include "../../outputs/C/linalg.h"
 #endif
 #endif 
+#include "../test.h"
 const size_t DIM = 3;
 #define N 1000000
 
@@ -63,10 +64,9 @@ int main(int argc, char** argv)
 	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
 #endif
 	
-    // timer_t t = tic();
-    clock_t start_time = clock();
 
     double total = 0;
+    TIC();
     for (int count = 0; count < N; ++count) {
         vec1->arr[0] += 1.0 / (2.0 + vec1->arr[0]);
         vec2->arr[2] += 1.0 / (2.0 + vec2->arr[2]);
@@ -86,9 +86,8 @@ int main(int argc, char** argv)
 #endif
 #endif
     }
-    clock_t end_time = clock();
-    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-    printf("%f milliseconds\n", elapsed_time * 1000);
+    TOC();
+    printf("%f", total);
 
     // float elapsed = toc2(t);
     // printf("total =%f, time per call = %f ms\n, %f", total, elapsed / (double)(N), elapsed);

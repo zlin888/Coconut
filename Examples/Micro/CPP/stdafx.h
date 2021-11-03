@@ -16,13 +16,3 @@
 
 #include <stdlib.h>
 #include <time.h>
-
-/** Timing */
-
-typedef struct timer_t {
-	clock_t start;
-} timer_t;
-
-timer_t tic();
-
-float toc(timer_t t);

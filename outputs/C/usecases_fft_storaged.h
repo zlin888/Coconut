@@ -210,7 +210,7 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
 		for(int i_dps = 0; i_dps < macroDef618->length; i_dps++){
 			card_t jj_shp = 0;
 			index_t jj_dps = 0;
-            reverse_bits(i_dps, 3, &jj_dps);
+            reverse_bits(i_dps, log(dim) / log(2), &jj_dps);
 			macroDef618->arr[i_dps] = primal_dps->arr[jj_dps];;
 			stgVar564 = STG_OFFSET(stgVar564, VECTOR_ALL_BYTES(macroDef618->arr[i_dps]->length));
 		}
@@ -240,7 +240,7 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
 		storage_t stgVar577 = (STG_OFFSET(macroDef625, MATRIX_HEADER_BYTES(macroDef624)));
 		for(int k_dps = 0; k_dps < macroDef625->length; k_dps++){
 			card_t i_shp = 0;
-			index_t i_dps = ((j_dps) * (4)) + (k_dps);
+			index_t i_dps = ((j_dps) * (dim / 2)) + (k_dps);
 			macroDef625->arr[k_dps] = macroDef674->arr[(int)(offset0_dps->arr[i_dps])];;
 			stgVar577 = STG_OFFSET(stgVar577, VECTOR_ALL_BYTES(macroDef625->arr[k_dps]->length));
 		}
@@ -256,7 +256,7 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
 		storage_t stgVar583 = (STG_OFFSET(macroDef634, MATRIX_HEADER_BYTES(macroDef631)));
 		for(int k_dps = 0; k_dps < macroDef634->length; k_dps++){
 			card_t i_shp = 0;
-			index_t i_dps = ((j_dps) * (4)) + (k_dps);
+			index_t i_dps = ((j_dps) * (dim / 2)) + (k_dps);
 			card_t size682 = width_card_t(init_dual_shp.elem);
 	array_number_t stgVar586 = storage_alloc(size682);
 	array_number_t macroDef633;card_t size681 = width_card_t(omegas_shp.elem);
@@ -281,11 +281,11 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
 		storage_t stgVar592 = (STG_OFFSET(macroDef645, MATRIX_HEADER_BYTES(macroDef640)));
 		for(int k_dps = 0; k_dps < macroDef645->length; k_dps++){
 			card_t i_shp = 0;
-			index_t i_dps = (k_dps) % (4);
+			index_t i_dps = (k_dps) % (dim / 2);
 			card_t c_shp = 0;
-			bool_t c_dps = (k_dps) < (4);
+			bool_t c_dps = (k_dps) < (dim / 2);
 			array_number_t ite676 ;
-	if((k_dps) < (4)) {
+	if((k_dps) < (dim / 2)) {
 		card_t size685 = width_card_t(ms_shp.elem);
 	array_number_t stgVar596 = storage_alloc(size685);
 	array_number_t macroDef642;card_t size684 = width_card_t(us_shp.elem);
@@ -324,10 +324,10 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
 
 		for(int k_dps = 0; k_dps < macroDef651->length; k_dps++){
 			card_t i_shp = 0;
-			index_t i_dps = ((j_dps) * (4)) + ((k_dps) % (4));
+			index_t i_dps = ((j_dps) * (dim / 2)) + ((k_dps) % (dim / 2));
 			array_number_t ite677 ;
             //printf("%d, %d, %d\n", j_dps, i_dps, k_dps);
-	if((k_dps) < (4)) {
+	if((k_dps) < (dim / 2)) {
 		
 		ite677 = dual_concat_dps->arr[(int)(offset0_dps->arr[i_dps])];;
 	} else {
@@ -351,6 +351,7 @@ array_array_number_t TOP_LEVEL_usecases_fft_fft_dps(storage_t stgVar561, array_a
         printf("DUAL(%d)\n", j_dps);
         matrix_print(macroDef674);
 #endif
+	storage_free(stgVar603, size689);
 	}
 	macroDef675 = macroDef674;;
 	storage_free(stgVar562, size693);

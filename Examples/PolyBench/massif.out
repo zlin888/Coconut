@@ -1,0 +1,855 @@
+desc: --massif-out-file=massif.out
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2374078
+mem_heap_B=79024
+mem_heap_extra_B=544
+mem_stacks_B=0
+heap_tree=peak
+n3: 79024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4800 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401C4C: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+ n0: 1520 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=15527400
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=36669416
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=53186616
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=69703816
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=90845832
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=111987848
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=133129864
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=150425732
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=169963220
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=189500708
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=209038196
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=228575684
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=248113172
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=269774300
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=281666684
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=293559068
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=305451452
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=317343836
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=329236220
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=341128604
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=353020988
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=364913372
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=376805756
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=388698140
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=400590524
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=417461664
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=439311560
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=461161456
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=472086404
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=483011352
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=493936300
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=504861248
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=515786196
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=526711144
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=537636092
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=548561040
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=559485988
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=570410936
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=581335884
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=592260832
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=603185780
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=614110728
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=625035676
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=635960624
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=646885572
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=657810520
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=668735468
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=679660416
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=690585364
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=701510312
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=712435260
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=723360208
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=734285156
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n3: 78864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4720 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 720 in 1 place, below massif's threshold (1.00%)
+ n0: 1440 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=745210104
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=756135052
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=767060000
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=777984948
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=788909896
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=799834844
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=810759792
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=821684740
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=832609688
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=843534636
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n3: 78864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4720 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 720 in 1 place, below massif's threshold (1.00%)
+ n0: 1440 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=854459584
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=865384532
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=876309480
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=887234428
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=898159376
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=909084324
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=920009272
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=930934220
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=941859168
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=952784116
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n3: 78864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4720 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 720 in 1 place, below massif's threshold (1.00%)
+ n0: 1440 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=963709064
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=974634012
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=985558960
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=996483908
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=1007408856
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=1018333804
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=1029258752
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=1040183700
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=1051108648
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=1062033596
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n3: 78864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4720 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 720 in 1 place, below massif's threshold (1.00%)
+ n0: 1440 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=85
+#-----------
+time=1072958544
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=1083883492
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=1094808440
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=1105733388
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=1116658336
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=1127583284
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=1138508232
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=1149433180
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=1160358128
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=1171283076
+mem_heap_B=78864
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=detailed
+n3: 78864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n6: 4720 0x402431: Vec<double, 0, Vec_GE>* std::__uninitialized_fill_n<false>::__uninit_fill_n<Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> >(Vec<double, 0, Vec_GE>*, unsigned long, Vec<double, 0, Vec_GE> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4016D3: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401758: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x4017DA: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x40185F: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 800 0x401907: main (in /home/zlin/code/lift-paper/Coconut/Examples/PolyBench/a.out)
+  n0: 720 in 1 place, below massif's threshold (1.00%)
+ n0: 1440 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=95
+#-----------
+time=1182562446
+mem_heap_B=78848
+mem_heap_extra_B=448
+mem_stacks_B=0
+heap_tree=empty

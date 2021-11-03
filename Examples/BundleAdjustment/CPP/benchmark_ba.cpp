@@ -1,7 +1,7 @@
 // benchmark_ba.cpp : Defines the entry point for the console application.
 //
-
 #include "stdafx.h"
+#include "../../test.h"
 
 #include "usecases_ba.h"
 
@@ -20,7 +20,7 @@ int main()
 
 
     // boost::timer::auto_cpu_timer t;
-    timer_t t = tic();
+    TIC();
 
     // Debug 150s 
     // Release 1s
@@ -32,14 +32,14 @@ int main()
     for (int count = 0; count < N; ++count) {
         X[0] = 1.0 / (2.0 + count);
         cam[5] = 1.0 + count * 1e-6;
+        cam[0] = cam[0] + 0.0001;
 
         total += sumsq(project(cam, X));
     }
 
     // std::cout << "total =" << total << ", time per call = " << t.elapsed().wall/double(N) << "ns" << std::endl;
-    // std::cout << "total =" << total << std::endl;
-    auto elapsed = toc(t);
-    printf("total =%f, time per call = %f ms\n", total, elapsed / double(N));
+    std::cout << "total =" << total << std::endl;
+    TOC();
     
     return 0;
 }

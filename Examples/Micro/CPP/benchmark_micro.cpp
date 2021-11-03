@@ -1,6 +1,7 @@
 #include <random>
 
 #include "stdafx.h"
+#include "../../test.h"
 
 typedef Vec<Real> Vector;
 
@@ -46,8 +47,8 @@ int main(int argc, char** argv)
 #endif
   }
 
-  timer_t t = tic();
 
+  TIC();
   double total = 0;
 
   for (cardinality_t count = 0; count < N; ++count) {
@@ -66,8 +67,8 @@ int main(int argc, char** argv)
 #endif
   }
 
-  auto elapsed = toc(t);
-  printf("total =%f, time per call = %f ms\n", total, elapsed / double(N));
+  TOC();
+  std::cout << total << std::endl;
 
   return 0;
 }

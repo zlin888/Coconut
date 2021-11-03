@@ -1,0 +1,673 @@
+desc: --massif-out-file=massif.out
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3371404
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=peak
+n16: 840124 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 184332 0x406FCD: matrix_fill (fft.c:11)
+  n0: 184332 0x406FCD: main (fft.c:47)
+ n1: 184332 0x407067: matrix_fill (fft.c:11)
+  n0: 184332 0x407067: main (fft.c:48)
+ n1: 40992 0x406E2A: matrix_fill (fft.c:11)
+  n1: 40992 0x406E2A: vector_fill (fft.c:22)
+   n0: 40992 0x406E2A: main (fft.c:41)
+ n1: 40992 0x406E6D: matrix_fill (fft.c:11)
+  n1: 40992 0x406E6D: vector_fill (fft.c:22)
+   n0: 40992 0x406E6D: main (fft.c:42)
+ n1: 40992 0x406EB0: matrix_fill (fft.c:11)
+  n1: 40992 0x406EB0: vector_fill (fft.c:22)
+   n0: 40992 0x406EB0: main (fft.c:43)
+ n1: 40992 0x406EF3: matrix_fill (fft.c:11)
+  n1: 40992 0x406EF3: vector_fill (fft.c:22)
+   n0: 40992 0x406EF3: main (fft.c:44)
+ n1: 40992 0x4074F7: matrix_fill (fft.c:11)
+  n1: 40992 0x4074F7: vector_fill (fft.c:22)
+   n0: 40992 0x4074F7: main (fft.c:114)
+ n1: 40992 0x407542: matrix_fill (fft.c:11)
+  n1: 40992 0x407542: vector_fill (fft.c:22)
+   n0: 40992 0x407542: main (fft.c:115)
+ n1: 36876 0x4063B6: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x4063B6: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:204)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406707: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x406707: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:276)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x4067E9: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x4067E9: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:318)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406CFA: matrix_fill (fft.c:11)
+  n0: 36876 0x406CFA: main (fft.c:39)
+ n1: 36876 0x406D91: matrix_fill (fft.c:11)
+  n0: 36876 0x406D91: main (fft.c:40)
+ n1: 18444 0x40650C: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x40650C: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:235)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n1: 18444 0x406633: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x406633: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:251)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n0: 4240 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=27630009
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=86806431
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=129302601
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=176857673
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=202121305
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=237787609
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=273453913
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=326406522
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=386837939
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=417098323
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=455941403
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=486201787
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=533685642
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=568212868
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=594117059
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=628684624
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=680484333
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=715060571
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=749587797
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=784164035
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=818691261
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=853267499
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=887794725
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=922370963
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=956898189
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=990161643
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1023425491
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1056697722
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1089974998
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1123238452
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1156510806
+mem_heap_B=747928
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1189774531
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1223051807
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1256315261
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1289587492
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1322851340
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1372760146
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1422664301
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1455928149
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1505836955
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1539100803
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1572373034
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1605650310
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=detailed
+n16: 840124 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 184332 0x406FCD: matrix_fill (fft.c:11)
+  n0: 184332 0x406FCD: main (fft.c:47)
+ n1: 184332 0x407067: matrix_fill (fft.c:11)
+  n0: 184332 0x407067: main (fft.c:48)
+ n1: 40992 0x406E2A: matrix_fill (fft.c:11)
+  n1: 40992 0x406E2A: vector_fill (fft.c:22)
+   n0: 40992 0x406E2A: main (fft.c:41)
+ n1: 40992 0x406E6D: matrix_fill (fft.c:11)
+  n1: 40992 0x406E6D: vector_fill (fft.c:22)
+   n0: 40992 0x406E6D: main (fft.c:42)
+ n1: 40992 0x406EB0: matrix_fill (fft.c:11)
+  n1: 40992 0x406EB0: vector_fill (fft.c:22)
+   n0: 40992 0x406EB0: main (fft.c:43)
+ n1: 40992 0x406EF3: matrix_fill (fft.c:11)
+  n1: 40992 0x406EF3: vector_fill (fft.c:22)
+   n0: 40992 0x406EF3: main (fft.c:44)
+ n1: 40992 0x4074F7: matrix_fill (fft.c:11)
+  n1: 40992 0x4074F7: vector_fill (fft.c:22)
+   n0: 40992 0x4074F7: main (fft.c:114)
+ n1: 40992 0x407542: matrix_fill (fft.c:11)
+  n1: 40992 0x407542: vector_fill (fft.c:22)
+   n0: 40992 0x407542: main (fft.c:115)
+ n1: 36876 0x4063B6: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x4063B6: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:204)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406707: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x406707: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:276)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x4067E9: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x4067E9: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:318)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406CFA: matrix_fill (fft.c:11)
+  n0: 36876 0x406CFA: main (fft.c:39)
+ n1: 36876 0x406D91: matrix_fill (fft.c:11)
+  n0: 36876 0x406D91: main (fft.c:40)
+ n1: 18444 0x40650C: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x40650C: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:235)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n1: 18444 0x406633: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x406633: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:251)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n0: 4240 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=1638913764
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1672186118
+mem_heap_B=747928
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1705449843
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1738727119
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1788622497
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1812889485
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1837165146
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1861441201
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1885708189
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1909983850
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1934259905
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1958526893
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1982802554
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=2007078609
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=detailed
+n15: 803248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 184332 0x406FCD: matrix_fill (fft.c:11)
+  n0: 184332 0x406FCD: main (fft.c:47)
+ n1: 184332 0x407067: matrix_fill (fft.c:11)
+  n0: 184332 0x407067: main (fft.c:48)
+ n1: 40992 0x406E2A: matrix_fill (fft.c:11)
+  n1: 40992 0x406E2A: vector_fill (fft.c:22)
+   n0: 40992 0x406E2A: main (fft.c:41)
+ n1: 40992 0x406E6D: matrix_fill (fft.c:11)
+  n1: 40992 0x406E6D: vector_fill (fft.c:22)
+   n0: 40992 0x406E6D: main (fft.c:42)
+ n1: 40992 0x406EB0: matrix_fill (fft.c:11)
+  n1: 40992 0x406EB0: vector_fill (fft.c:22)
+   n0: 40992 0x406EB0: main (fft.c:43)
+ n1: 40992 0x406EF3: matrix_fill (fft.c:11)
+  n1: 40992 0x406EF3: vector_fill (fft.c:22)
+   n0: 40992 0x406EF3: main (fft.c:44)
+ n1: 40992 0x4074F7: matrix_fill (fft.c:11)
+  n1: 40992 0x4074F7: vector_fill (fft.c:22)
+   n0: 40992 0x4074F7: main (fft.c:114)
+ n1: 40992 0x407542: matrix_fill (fft.c:11)
+  n1: 40992 0x407542: vector_fill (fft.c:22)
+   n0: 40992 0x407542: main (fft.c:115)
+ n1: 36876 0x4063B6: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x4063B6: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:204)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406707: storage_alloc (mem_mng.h:77)
+  n1: 36876 0x406707: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:276)
+   n0: 36876 0x40773D: main (fft.c:150)
+ n1: 36876 0x406CFA: matrix_fill (fft.c:11)
+  n0: 36876 0x406CFA: main (fft.c:39)
+ n1: 36876 0x406D91: matrix_fill (fft.c:11)
+  n0: 36876 0x406D91: main (fft.c:40)
+ n1: 18444 0x40650C: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x40650C: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:235)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n1: 18444 0x406633: storage_alloc (mem_mng.h:77)
+  n1: 18444 0x406633: TOP_LEVEL_usecases_fft_fft_dps (usecases_fft_storaged.h:251)
+   n0: 18444 0x40773D: main (fft.c:150)
+ n0: 4240 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=2031345597
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=2055621258
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=2079897313
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=2104164301
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=2128439962
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=2152716017
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=2176983005
+mem_heap_B=840124
+mem_heap_extra_B=172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=2201258666
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=2225534721
+mem_heap_B=803248
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty

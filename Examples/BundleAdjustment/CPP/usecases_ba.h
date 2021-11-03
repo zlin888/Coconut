@@ -1,6 +1,5 @@
 // usecases_ba.h: Bundle Adjustment
 
-#include "stdafx.h"
 #include <math.h>
 
 static const int N_CAM_PARAMS = 11;

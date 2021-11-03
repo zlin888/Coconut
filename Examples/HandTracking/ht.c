@@ -82,6 +82,7 @@ int main(int argc, char** argv)
 #endif
 
   double total = 0;
+  // int N = 10000000;
   int N = 10000000;
   for (int count = 0; count < N; ++count) {
     angle->arr[0] -= 1.0 / N;
@@ -95,6 +96,7 @@ int main(int argc, char** argv)
 #endif
     // array_number_t verts1 = verts->arr[0];
     // total += vectorNorm(verts1);
+    // printf("%f ", verts->arr[0]->arr[0]);
     total += verts->arr[0]->arr[0];
 #ifdef DPS
 #ifndef HOIST

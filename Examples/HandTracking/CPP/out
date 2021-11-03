@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Command:            ./a.out
+Massif arguments:   --massif-out-file=massif.out
+ms_print arguments: massif.out
+--------------------------------------------------------------------------------
+
+
+    KB
+72.02^                                                                       #
+     |:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   13.05
+
+Number of snapshots: 6
+ Detailed snapshots: [3 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,213,770           72,712           72,704             8            0
+  2 14,015,086,292           73,744           73,728            16            0
+  3 14,015,115,820           73,744           73,728            16            0
+99.98% (73,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.59% (72,704B) 0x48FEA99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->98.59% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->98.59% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->98.59% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->98.59% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.39% (1,024B) 0x4C28E83: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.39% (1,024B) 0x4C3904F: _IO_doallocbuf (genops.c:347)
+    ->01.39% (1,024B) 0x4C380AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+      ->01.39% (1,024B) 0x4C04DAF: __printf_fp_l (printf_fp.c:1246)
+        ->01.39% (1,024B) 0x4C1E639: __vfprintf_internal (vfprintf-internal.c:1687)
+          ->01.39% (1,024B) 0x4C08EBE: printf (printf.c:33)
+            ->01.39% (1,024B) 0x40130D: printT(double) (in /home/zlin/code/lift-paper/Coconut/Examples/HandTracking/CPP/a.out)
+              ->01.39% (1,024B) 0x401516: main (in /home/zlin/code/lift-paper/Coconut/Examples/HandTracking/CPP/a.out)
+                
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4 14,015,115,820            1,032            1,024             8            0
+  5 14,015,117,537                0                0             0            0

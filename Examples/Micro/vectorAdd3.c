@@ -4,6 +4,7 @@
 #define ADD3
 
 #include "../../outputs/C/linalg_opt_storaged.h"
+#include "../test.h"
 const size_t DIM = 100;
 #define N 1000000
 
@@ -56,15 +57,16 @@ int main(int argc, char** argv)
 	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
 	
     // timer_t t = tic();
-    clock_t start_time = clock();
+    TIC();
 
     double total = 0;
     for (int count = 0; count < N; ++count) {
+		vec1->arr[0] += 0.1;
+		vec2->arr[2] += 0.1;
         total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_dps(s, vec1, vec2, vec3, DIM, DIM, DIM));
     }
-    clock_t end_time = clock();
-    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-    printf("%f milliseconds\n", elapsed_time * 1000);
+    TOC();
+    printf("%f", total);
 
     // float elapsed = toc2(t);
     // printf("total =%f, time per call = %f ms\n, %f", total, elapsed / (double)(N), elapsed);

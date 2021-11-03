@@ -3,7 +3,6 @@
 #define HOIST
 #ifdef DPS
 #ifdef FUSED
-#include "../test.h"
 #include "../../outputs/C/usecases_ba_opt_storaged.h"
 #else
 #include "../../outputs/C/usecases_ba_storaged.h"
@@ -15,6 +14,7 @@
 #include "../../outputs/C/usecases_ba.h"
 #endif
 #endif
+#include "../test.h"
 
 int main(int argc, char** argv)
 {

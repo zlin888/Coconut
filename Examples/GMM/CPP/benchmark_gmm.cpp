@@ -6,7 +6,10 @@
 #include <random>
 
 #include "usecases_gmm.h"
-#include "../../test.h"
+#include "../../mytime.h"
+
+#define SIZE 1 << 18
+#define N 10
 
 Real gmm_objective(Vec<Vector> const& x,
   Vector const& alphas, Vec<Vector> const& means, Vec<Vector> const& qs, Vec<Vector> const& ls,
@@ -24,10 +27,10 @@ int main()
   // std::uniform_real_distribution<Real> dist(0, 1);
 
   // Problem size
-  cardinality_t n = 100;
+  cardinality_t n = SIZE;
   cardinality_t d = GMM_D;
   cardinality_t K = GMM_K;
-  size_t n2 = 100;
+  size_t n2 = SIZE;
   size_t K2 = GMM_K;
 
 
@@ -62,7 +65,7 @@ int main()
   // Debug 150s 
     // Release 1s
   double total = 0;
-  cardinality_t N = 10000;
+  //cardinality_t N = 100;
 #ifdef _DEBUG
   N = N / 10;  // Debug is roughly this much slower than release -- multiply timings.
 #endif
