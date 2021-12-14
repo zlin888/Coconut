@@ -1,0 +1,65 @@
+--------------------------------------------------------------------------------
+Command:            ./a.out
+Massif arguments:   --massif-out-file=massif.out
+ms_print arguments: massif.out
+--------------------------------------------------------------------------------
+
+
+    KB
+1.273^                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#
+     |:                                                                      #
+     |:                                                                      #
+     |:                                                                      #
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   391.2
+
+Number of snapshots: 8
+ Detailed snapshots: [6 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        151,971               72               56            16            0
+  2        152,015              144              112            32            0
+  3        152,059              216              168            48            0
+  4        153,359              272              204            68            0
+  5    410,157,562            1,304            1,228            76            0
+  6    410,166,500            1,304            1,228            76            0
+94.17% (1,228B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->78.53% (1,024B) 0x48E1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->78.53% (1,024B) 0x48F204F: _IO_doallocbuf (genops.c:347)
+|   ->78.53% (1,024B) 0x48F10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->78.53% (1,024B) 0x48BDDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->78.53% (1,024B) 0x48D7639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->78.53% (1,024B) 0x48C1EBE: printf (printf.c:33)
+|           ->78.53% (1,024B) 0x402949: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+|             
+->04.29% (56B) 0x40265B: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+| 
+->04.29% (56B) 0x40269E: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+| 
+->04.29% (56B) 0x4026E1: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+| 
+->02.76% (36B) 0x402824: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  7    410,166,500              272              204            68            0

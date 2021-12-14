@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------------
+Command:            ./a.out
+Massif arguments:   --massif-out-file=massif.out
+ms_print arguments: massif.out
+--------------------------------------------------------------------------------
+
+
+    KB
+1.562^#       :::        : ::      :::@@::      : :   :  :        :   :::    :
+     |#@@::::@: :  ::::::::: @:::  : :@ :    :::::::  :@@::::::::::@@:: ::::::
+     |#@ : : @: :::: ::: ::: @:: ::: :@ : ::::  :::::::@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+     |#@ : : @: :: : ::: ::: @:: : : :@ : : ::  ::::: :@ :: ::::: :@ :: ::::::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   5.779
+
+Number of snapshots: 51
+ Detailed snapshots: [1 (peak), 2, 5, 16, 22, 33, 42]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        176,719            1,600            1,480           120            0
+92.50% (1,480B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->64.00% (1,024B) 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->64.00% (1,024B) 0x4A4104F: _IO_doallocbuf (genops.c:347)
+|   ->64.00% (1,024B) 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->64.00% (1,024B) 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->64.00% (1,024B) 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->64.00% (1,024B) 0x4A10EBE: printf (printf.c:33)
+|           ->64.00% (1,024B) 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+|             
+->16.00% (256B) 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->05.50% (88B) 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->02.25% (36B) 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.25% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.25% (36B) 0x401FBE: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.25% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.50% (24B) 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->01.00% (16B) in 2 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2    103,153,837            1,544            1,444           100            0
+93.52% (1,444B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.32% (1,024B) 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->66.32% (1,024B) 0x4A4104F: _IO_doallocbuf (genops.c:347)
+|   ->66.32% (1,024B) 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->66.32% (1,024B) 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->66.32% (1,024B) 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->66.32% (1,024B) 0x4A10EBE: printf (printf.c:33)
+|           ->66.32% (1,024B) 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+|             
+->16.58% (256B) 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->05.70% (88B) 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->02.33% (36B) 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.33% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.55% (24B) 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->01.04% (16B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3    280,647,019            1,544            1,444           100            0
+  4    443,392,368            1,544            1,444           100            0
+  5    608,295,705            1,544            1,444           100            0
+93.52% (1,444B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.32% (1,024B) 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->66.32% (1,024B) 0x4A4104F: _IO_doallocbuf (genops.c:347)
+|   ->66.32% (1,024B) 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->66.32% (1,024B) 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->66.32% (1,024B) 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->66.32% (1,024B) 0x4A10EBE: printf (printf.c:33)
+|           ->66.32% (1,024B) 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+|             
+->16.58% (256B) 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->05.70% (88B) 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->02.33% (36B) 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.33% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.55% (24B) 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->01.04% (16B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6    711,881,994            1,600            1,480           120            0
+  7    886,093,526            1,600            1,480           120            0
+  8  1,000,889,124            1,488            1,408            80            0
+  9  1,173,082,508            1,544            1,444           100            0
+ 10  1,299,538,643            1,544            1,444           100            0
+ 11  1,437,654,750            1,544            1,444           100            0
+ 12  1,523,976,919            1,544            1,444           100            0
+ 13  1,644,827,878            1,600            1,480           120            0
+ 14  1,748,414,410            1,544            1,444           100            0
+ 15  1,886,530,133            1,600            1,480           120            0
+ 16  2,007,381,071            1,544            1,444           100            0
+93.52% (1,444B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->66.32% (1,024B) 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->66.32% (1,024B) 0x4A4104F: _IO_doallocbuf (genops.c:347)
+|   ->66.32% (1,024B) 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->66.32% (1,024B) 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->66.32% (1,024B) 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->66.32% (1,024B) 0x4A10EBE: printf (printf.c:33)
+|           ->66.32% (1,024B) 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+|             
+->16.58% (256B) 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->05.70% (88B) 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->02.33% (36B) 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.33% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.55% (24B) 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->01.04% (16B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17  2,093,703,193            1,544            1,444           100            0
+ 18  2,208,499,891            1,544            1,444           100            0
+ 19  2,380,694,943            1,488            1,408            80            0
+ 20  2,581,589,430            1,600            1,480           120            0
+ 21  2,696,386,060            1,600            1,480           120            0
+ 22  2,811,182,931            1,600            1,480           120            0
+92.50% (1,480B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->64.00% (1,024B) 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->64.00% (1,024B) 0x4A4104F: _IO_doallocbuf (genops.c:347)
+|   ->64.00% (1,024B) 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->64.00% (1,024B) 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+|       ->64.00% (1,024B) 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+|         ->64.00% (1,024B) 0x4A10EBE: printf (printf.c:33)
+|           ->64.00% (1,024B) 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+|             
+->16.00% (256B) 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->05.50% (88B) 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| 
+->02.25% (36B) 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.25% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.25% (36B) 0x401FBE: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| ->02.25% (36B) 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.50% (24B) 0x40

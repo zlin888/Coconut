@@ -1,0 +1,522 @@
+desc: --massif-out-file=massif.out
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=176719
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=peak
+n7: 1480 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 36 0x401FBE: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=103153837
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1444 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=280647019
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=443392368
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=608295705
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1444 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=711881994
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=886093526
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1000889124
+mem_heap_B=1408
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1173082508
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1299538643
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1437654750
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1523976919
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1644827878
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1748414410
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1886530133
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2007381071
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1444 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=2093703193
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2208499891
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=2380694943
+mem_heap_B=1408
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2581589430
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2696386060
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2811182931
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1480 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 36 0x401FBE: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=2983377971
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3126873921
+mem_heap_B=1408
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3327767941
+mem_heap_B=1408
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3442564779
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3632249078
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3735835652
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=3839422181
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3943008762
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4046595283
+mem_heap_B=1408
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=4201975132
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4305561730
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1444 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=4409148235
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=4512734833
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=4668114763
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=4771701261
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=4875287901
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=4978874380
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=5082460941
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=5186047719
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=5341427547
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1444 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A30E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4A4104F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4A400AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4A0CDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x4A26639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x4A10EBE: printf (printf.c:33)
+       n0: 1024 0x4068EB: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 256 0x4068BC: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 88 0x40682B: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n2: 36 0x401D03: TOP_LEVEL_usecases_ba_project_dps (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 36 0x406997: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 24 0x406893: main (in /home/zlin/code/lift-paper/Coconut/Examples/BundleAdjustment/a.out)
+ n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=5445014181
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=5548600658
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=5703980655
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=5807567409
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=5911153886
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=6014740590
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=6118327224
+mem_heap_B=1444
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6204649429
+mem_heap_B=1480
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,79 @@
+desc: --massif-out-file=massif.out
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=151971
+mem_heap_B=56
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=152015
+mem_heap_B=112
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=152059
+mem_heap_B=168
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=153359
+mem_heap_B=204
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=410157562
+mem_heap_B=1228
+mem_heap_extra_B=76
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=410166500
+mem_heap_B=1228
+mem_heap_extra_B=76
+mem_stacks_B=0
+heap_tree=peak
+n5: 1228 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x48E1E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x48F204F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48F10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48BDDAF: __printf_fp_l (printf_fp.c:1246)
+     n1: 1024 0x48D7639: __vfprintf_internal (vfprintf-internal.c:1687)
+      n1: 1024 0x48C1EBE: printf (printf.c:33)
+       n0: 1024 0x402949: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+ n0: 56 0x40265B: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+ n0: 56 0x40269E: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+ n0: 56 0x4026E1: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+ n0: 36 0x402824: main (in /home/zlin/code/lift-paper/Coconut/Examples/Micro/a.out)
+#-----------
+snapshot=7
+#-----------
+time=410166500
+mem_heap_B=204
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty

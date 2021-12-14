@@ -1,0 +1,483 @@
+desc: --massif-out-file=massif.out
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=23055914
+mem_heap_B=10559296
+mem_heap_extra_B=4198616
+mem_stacks_B=0
+heap_tree=peak
+n3: 10559296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73056 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=271017966
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=490317371
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=708783255
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=844369360
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1030172089
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1180820059
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1381683928
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1519778477
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1744019768
+mem_heap_B=10559312
+mem_heap_extra_B=4198616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1958305231
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2211551830
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=2347915359
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2641941794
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2822725476
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=3063770602
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3304816258
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3455470362
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3636254838
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3817038662
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73120 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=3997822405
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=4246399525
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=4457313490
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=4615498941
+mem_heap_B=10559312
+mem_heap_extra_B=4198616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4826412814
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=4931870222
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5142783868
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5248241105
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5459155560
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5670069744
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=5828254974
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=6039169115
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=6250082751
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=6513724964
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=6671910471
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6830096804
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=6988283182
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=7146470076
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=7357386109
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=7568301613
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=7831946304
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=7990132732
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=8201047654
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=8411963083
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=8517421086
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=8728336737
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=8886523474
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=9150167607
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=9361083102
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=9466540434
+mem_heap_B=10559336
+mem_heap_extra_B=4198632
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10559336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6291936 0x402179: Eigen::DenseStorage<double, -1, -1, 1, 0>::DenseStorage(Eigen::DenseStorage<double, -1, -1, 1, 0> const&) (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 6291456 0x40178B: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+  n0: 480 in 15 places, all below massif's threshold (1.00%)
+ n0: 4194304 0x401754: main (in /home/zlin/code/lift-paper/Coconut/Examples/GMM/CPP/a.out)
+ n0: 73096 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=9571997684
+mem_heap_B=10559312
+mem_heap_extra_B=4198616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=9677454959
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=9782912265
+mem_heap_B=10559360
+mem_heap_extra_B=4198648
+mem_stacks_B=0
+heap_tree=empty
