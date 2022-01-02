@@ -17,24 +17,7 @@
 #endif 
 #include "../test.h"
 const size_t DIM = 3;
-#define N 1000000
-
-
-array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
-#ifdef DPS
-  return TOP_LEVEL_linalg_matrixFill_dps(storage_alloc(MATRIX_ROWS_OFFSET(rows, cols, rows)), rows, cols, value, rows, cols, 0);
-#else
-  return TOP_LEVEL_linalg_matrixFill(rows, cols, value);
-#endif
-}
-
-array_number_t vector_fill(card_t rows, number_t value) {
-  return matrix_fill(1, rows, value)->arr[0];
-}
-
-double dist(int seed) {
-  return ((double)rand()/(double)RAND_MAX);
-}
+#define N 10000000
 
 number_t vectorSum(array_number_t v) {
 	number_t macroDef26 = 0;
@@ -48,22 +31,21 @@ number_t vectorSum(array_number_t v) {
 
 int main(int argc, char** argv)
 {
-	int rng = 42;
-	srand(rng);
-
+    srand(42);
 	array_number_t vec1 = vector_fill(DIM, 0.0);
 	array_number_t vec2 = vector_fill(DIM, 0.0);
-	array_number_t vec3 = vector_fill(DIM, 0.0);
 	for(int i=0; i<DIM; i++) {
-		vec1->arr[i] = dist(rng);
-		vec2->arr[i] = dist(rng);
-		vec3->arr[i] = dist(rng);
+		vec1->arr[i] = dist();
+	}
+	for(int i=0; i<DIM; i++) {
+		vec2->arr[i] = dist();
 	}
 
 #ifdef HOIST
 	storage_t s = storage_alloc(VECTOR_ALL_BYTES(DIM));
 #endif
-	
+    array_print(vec1);
+    array_print(vec2);
 
     double total = 0;
     TIC();
@@ -77,6 +59,8 @@ int main(int argc, char** argv)
 #endif
     #ifdef DPS
         total += vectorSum(TOP_LEVEL_linalg_cross_dps(s, vec1, vec2, DIM, DIM));
+    //array_number_t arr = TOP_LEVEL_linalg_cross_dps(s, vec1, vec2, DIM, DIM);
+         //total += arr->arr[0];
 	#else
         total += vectorSum(TOP_LEVEL_linalg_cross(vec1, vec2));
 	#endif
