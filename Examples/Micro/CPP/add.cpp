@@ -1,8 +1,7 @@
 #include <random>
 
 #include "stdafx.h"
-#include "../../mytime.h"
-#define CROSS 1
+#include "../../test.h"
 
 typedef Vec<Real> Vector;
 
@@ -14,12 +13,16 @@ Real dist(int seed) {
 
 int main(int argc, char** argv)
 {
+  if(argc != 2) {
+    printf("You should use the following format for running this program: %s <Number of Iterations>\n", argv[0]);
+    exit(1);
+  }
+  cardinality_t N = atoi(argv[1]);
   int rng = 42;
   srand(rng);
 
 #ifdef ADD3
-    int N = 1;
-    cardinality_t DIM = (1 << 24);
+    cardinality_t DIM = 100;
     Vector vec1{ DIM };
     Vector vec2{ DIM };
     Vector vec3{ DIM };
@@ -31,7 +34,6 @@ int main(int argc, char** argv)
     Vector vec1{ DIM };
     Vector vec2{ DIM };
 #elif CROSS
-    int N = 10000000;
     cardinality_t DIM = 3;
     Vec3<Real> vec1;
     Vec3<Real> vec2;
@@ -45,8 +47,6 @@ int main(int argc, char** argv)
 #endif
   }
 
-  std::cout << vec1[0] << vec1[1] << vec1[2] << std::endl;
-  std::cout << vec2[0] << vec2[1] << vec2[2] << std::endl;
 
   TIC();
   double total = 0;
