@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADD3	Examples/Micro/CPP/add.cpp	2;"	d	file:
 ADD3	Examples/Micro/add3.c	4;"	d	file:
 ADD3	Examples/Micro/micro.c	4;"	d	file:
 ADD3	Examples/Micro/newadd3.c	4;"	d	file:
@@ -57,8 +58,7 @@ Count	Runtime/CPP/Count.h	/^struct Count {$/;"	s
 Count	Runtime/CPP/Count.h	/^struct Count<T> {$/;"	s
 DECLARE_BINOP	Runtime/CPP/Vec.h	481;"	d
 DECLARE_CONTAINER	Runtime/CPP/autodiff.cpp	191;"	d	file:
-DIM	Examples/Micro/add3.c	/^    const size_t DIM = 100;$/;"	v
-DIM	Examples/Micro/add3.c	/^    const size_t DIM = 3;$/;"	v
+DIM	Examples/Micro/add3.c	19;"	d	file:
 DIM	Examples/Micro/cross.c	/^const size_t DIM = 3;$/;"	v
 DIM	Examples/Micro/micro.c	/^    const size_t DIM = 100;$/;"	v
 DIM	Examples/Micro/micro.c	/^    const size_t DIM = 3;$/;"	v
@@ -170,7 +170,7 @@ N	Examples/FFT/fft.c	5;"	d	file:
 N	Examples/FFT/fft.c	7;"	d	file:
 N	Examples/GMM/CPP/benchmark_gmm.cpp	12;"	d	file:
 N	Examples/GMM/gmm.c	20;"	d	file:
-N	Examples/Micro/add3.c	26;"	d	file:
+N	Examples/Micro/add3.c	20;"	d	file:
 N	Examples/Micro/cross.c	20;"	d	file:
 N	Examples/Micro/newadd3.c	26;"	d	file:
 N	Examples/Micro/vectorAdd3.c	9;"	d	file:

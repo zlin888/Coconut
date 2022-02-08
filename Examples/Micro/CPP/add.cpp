@@ -1,7 +1,8 @@
 #include <random>
+#define ADD3
 
 #include "stdafx.h"
-#include "../../test.h"
+#include "../../mytime.h"
 
 typedef Vec<Real> Vector;
 
@@ -13,31 +14,14 @@ Real dist(int seed) {
 
 int main(int argc, char** argv)
 {
-  if(argc != 2) {
-    printf("You should use the following format for running this program: %s <Number of Iterations>\n", argv[0]);
-    exit(1);
-  }
-  cardinality_t N = atoi(argv[1]);
   int rng = 42;
   srand(rng);
 
-#ifdef ADD3
-    cardinality_t DIM = 100;
-    Vector vec1{ DIM };
-    Vector vec2{ DIM };
-    Vector vec3{ DIM };
-    // VecF<Real, 100> vec1;
-    // VecF<Real, 100> vec2;
-    // VecF<Real, 100> vec3;
-#elif DOT
-    cardinality_t DIM = 100;
-    Vector vec1{ DIM };
-    Vector vec2{ DIM };
-#elif CROSS
-    cardinality_t DIM = 3;
-    Vec3<Real> vec1;
-    Vec3<Real> vec2;
-#endif
+int N = 1;
+cardinality_t DIM = (1 << 24);
+Vector vec1{ DIM };
+Vector vec2{ DIM };
+Vector vec3{ DIM };
 
   for (cardinality_t k = 0; k < DIM; ++k) {
     vec1[k] = dist(rng);

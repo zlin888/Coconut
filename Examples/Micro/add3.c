@@ -16,14 +16,8 @@
 #include "../../outputs/C/linalg.h"
 #endif
 #endif 
-#ifdef ADD3
-    const size_t DIM = 100;
-#elif DOT
-    const size_t DIM = 100;
-#elif CROSS
-    const size_t DIM = 3;
-#endif
-#define N 1000000
+#define DIM (1 << 24)
+#define N 1
 
 
 array_array_number_t matrix_fill(card_t rows, card_t cols, number_t value) {
@@ -74,9 +68,7 @@ int main(int argc, char** argv)
     clock_t start_time = clock();
 
     double total = 0;
-    for (int count = 0; count < N; ++count) {
-        total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_dps(s, vec1, vec2, vec3, DIM, DIM, DIM));
-    }
+    total += vectorSum(TOP_LEVEL_linalg_vectorAdd3_dps(s, vec1, vec2, vec3, DIM, DIM, DIM));
     clock_t end_time = clock();
     double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("%f milliseconds\n", elapsed_time * 1000);
